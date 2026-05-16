@@ -1,0 +1,184 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary-color: #0066ff; /* Professional Blue */
+  --primary-hover: #0052cc;
+  --bg-outer: #0f172a !important; /* Enforce dark background */
+  --bg-inner: #1e293b !important;
+  --text-dark: #f8fafc; /* High contrast text */
+  --text-secondary: #94a3b8;
+  --accent-gradient: linear-gradient(135deg, #0066ff 0%, #3b82f6 100%);
+  --white: #1e293b;
+  --radius-lg: 40px;
+  --radius-md: 20px;
+  --shadow-picto: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-outer) !important;
+  color: var(--text-dark) !important;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
+/* Enforce dark theme on common classes */
+.text-dark { color: var(--text-dark) !important; }
+.text-secondary { color: var(--text-secondary) !important; }
+.bg-white { background-color: var(--bg-inner) !important; }
+.bg-light { background-color: rgba(255, 255, 255, 0.05) !important; }
+.border-light { border-color: var(--border-color) !important; }
+
+/* Site Container - "Picto" Style */
+.app-container {
+  background: var(--bg-inner) !important;
+  border-radius: var(--radius-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 90vh;
+  box-shadow: var(--shadow-picto);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--border-color);
+}
+
+
+.section-padding {
+  padding: 80px 40px;
+}
+
+@media (max-width: 768px) {
+  body { padding: 10px; }
+  .app-container { border-radius: 20px; }
+  .section-padding { padding: 40px 20px; }
+}
+
+.gradient-text {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+/* Navbar */
+.navbar-custom {
+  padding: 30px 40px;
+  background: transparent;
+}
+
+.nav-link {
+  color: var(--text-dark) !important;
+  font-weight: 600;
+  margin: 0 15px;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+.contact-btn {
+  background: var(--primary-color);
+  color: white !important;
+  padding: 10px 25px !important;
+  border-radius: 12px !important;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.4);
+}
+
+/* Buttons */
+.btn-picto-primary {
+  background: var(--primary-color);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 16px;
+  font-weight: 700;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-picto-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 20px 25px -5px rgba(168, 85, 247, 0.3);
+  color: white;
+}
+
+/* Cards */
+.card-picto {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 32px;
+  /* Complex transition for professional entry/exit */
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+              border-color 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  /* Persistent professional shadow - Darkened for better definition */
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.3);
+}
+
+.card-picto:hover {
+  transform: translateY(-15px) scale(1.01);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(168, 85, 247, 0.3);
+  /* Pronounced floating shadow (card ke piche shadow) */
+  box-shadow: 
+    0 40px 80px -15px rgba(0, 0, 0, 0.5),
+    0 20px 40px -20px rgba(168, 85, 247, 0.2);
+}
+
+/* Backwards/Settling effect on mouse leave */
+.card-picto:not(:hover) {
+  transform: translateY(0) scale(1);
+  transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.logo-circle {
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.4rem;
+  box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.3);
+}
+
+.badge-picto {
+  background: rgba(168, 85, 247, 0.15);
+  color: var(--primary-color);
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* Custom Input Styles */
+.custom-input:focus {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.15) !important;
+  color: white !important;
+}
+
+.custom-input::placeholder {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
