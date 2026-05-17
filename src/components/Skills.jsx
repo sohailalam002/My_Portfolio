@@ -18,12 +18,12 @@ const Skills = () => {
     {
       category: "Database",
       icon: <FaDatabase className="text-primary" size={24} />,
-      skills: ["MongoDB", "MySQL", "Mongoose"]
+      skills: ["MongoDB", "MySQL", " PostgreSQL", "Mongoose"]
     },
     {
       category: "Tools",
       icon: <FaWrench className="text-primary" size={24} />,
-      skills: ["Git", "GitHub", "Swagger", "VS Code"]
+      skills: ["Git", "GitHub", "Swagger", "Postman", "VS Code"]
     }
   ];
 
