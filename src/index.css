@@ -2,18 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --primary-color: #0066ff; /* Professional Blue */
-  --primary-hover: #0052cc;
-  --bg-outer: #0f172a !important; /* Enforce dark background */
-  --bg-inner: #1e293b !important;
-  --text-dark: #f8fafc; /* High contrast text */
-  --text-secondary: #94a3b8;
-  --accent-gradient: linear-gradient(135deg, #0066ff 0%, #3b82f6 100%);
-  --white: #1e293b;
+  --primary-color: #38A3D1;
+  --primary-hover: #0F6FA8;
+  --bg-outer: #D9F3FF !important;
+  --bg-inner: #FFFFFF !important;
+  --surface-soft: #F3FBFF;
+  --text-dark: #12384F;
+  --text-secondary: #5E7F92;
+  --accent-gradient: linear-gradient(135deg, #FFFFFF 0%, #BDEBFF 48%, #38A3D1 100%);
+  --white: #FFFFFF;
   --radius-lg: 40px;
   --radius-md: 20px;
-  --shadow-picto: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  --border-color: rgba(255, 255, 255, 0.1);
+  --shadow-picto: 0 25px 50px -12px rgba(56, 163, 209, 0.28);
+  --border-color: rgba(56, 163, 209, 0.18);
 }
 
 body {
@@ -29,8 +30,12 @@ body {
 /* Enforce dark theme on common classes */
 .text-dark { color: var(--text-dark) !important; }
 .text-secondary { color: var(--text-secondary) !important; }
+.text-primary { color: var(--primary-color) !important; }
+.text-white { color: var(--text-dark) !important; }
 .bg-white { background-color: var(--bg-inner) !important; }
-.bg-light { background-color: rgba(255, 255, 255, 0.05) !important; }
+.bg-light { background-color: rgba(189, 235, 255, 0.45) !important; }
+.bg-primary { background-color: var(--primary-color) !important; }
+.border-white { border-color: var(--border-color) !important; }
 .border-light { border-color: var(--border-color) !important; }
 
 /* Site Container - "Picto" Style */
@@ -78,45 +83,81 @@ body {
   transition: color 0.3s ease;
 }
 
-.nav-link:hover {
-  color: var(--primary-color) !important;
+.nav-text-link {
+  display: inline-block;
+  transform-origin: left bottom;
+  transition: color 0.3s ease, transform 0.25s ease;
 }
 
-.contact-btn {
-  background: var(--primary-color);
-  color: white !important;
+.nav-link:hover {
+  color: var(--primary-hover) !important;
+}
+
+.nav-text-link:hover {
+  transform: translate(-7px, 8px) rotate(-8deg);
+}
+
+.navbar-brand-name {
+  display: inline-block;
+}
+
+.navbar-brand:hover .navbar-brand-name {
+  animation: navbarNameBounce 0.55s ease-in-out;
+}
+
+@keyframes navbarNameBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(7px);
+  }
+}
+
+.contact-btn,
+.contact-btn.text-white {
+  background: var(--accent-gradient);
+  color: #12384F !important;
   padding: 10px 25px !important;
   border-radius: 12px !important;
   transition: all 0.3s ease;
 }
 
-.contact-btn:hover {
-  background: var(--primary-hover);
+.contact-btn:hover,
+.contact-btn.text-white:hover {
+  background: #FFFFFF;
+  color: #0F6FA8 !important;
   transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.4);
+  box-shadow: 0 10px 24px -8px rgba(56, 163, 209, 0.38);
 }
 
 /* Buttons */
-.btn-picto-primary {
-  background: var(--primary-color);
-  color: white;
+.btn-picto-primary,
+.btn-picto-primary.btn {
+  background: var(--accent-gradient);
+  color: #12384F;
   padding: 14px 32px;
   border-radius: 16px;
   font-weight: 700;
-  border: none;
+  border: 1px solid rgba(56, 163, 209, 0.24);
   transition: all 0.3s ease;
 }
 
-.btn-picto-primary:hover {
-  background: var(--primary-hover);
+.btn-picto-primary:hover,
+.btn-picto-primary.btn:hover {
+  background: #FFFFFF;
   transform: translateY(-3px);
-  box-shadow: 0 20px 25px -5px rgba(168, 85, 247, 0.3);
-  color: white;
+  box-shadow: 0 20px 28px -12px rgba(56, 163, 209, 0.34);
+  color: #0F6FA8;
 }
 
 /* Cards */
 .card-picto {
-  background: rgba(255, 255, 255, 0.03);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(217, 243, 255, 0.52));
   border: 1px solid var(--border-color);
   border-radius: 24px;
   padding: 32px;
@@ -132,12 +173,12 @@ body {
 
 .card-picto:hover {
   transform: translateY(-15px) scale(1.01);
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(168, 85, 247, 0.3);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 1), rgba(189, 235, 255, 0.66));
+  border-color: rgba(56, 163, 209, 0.34);
   /* Pronounced floating shadow (card ke piche shadow) */
   box-shadow: 
     0 40px 80px -15px rgba(0, 0, 0, 0.5),
-    0 20px 40px -20px rgba(168, 85, 247, 0.2);
+    0 20px 40px -20px rgba(56, 163, 209, 0.28);
 }
 
 /* Backwards/Settling effect on mouse leave */
@@ -150,20 +191,21 @@ body {
 .logo-circle {
   width: 50px;
   height: 50px;
-  background: var(--primary-color);
-  color: white;
+  background: var(--accent-gradient);
+  color: #12384F;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 800;
   font-size: 1.4rem;
-  box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.3);
+  box-shadow: 0 10px 18px -6px rgba(56, 163, 209, 0.34);
 }
 
 .badge-picto {
-  background: rgba(168, 85, 247, 0.15);
+  background: rgba(56, 163, 209, 0.1);
   color: var(--primary-color);
+  border: 1px solid rgba(56, 163, 209, 0.16);
   padding: 6px 14px;
   border-radius: 10px;
   font-size: 0.8rem;
@@ -172,13 +214,16 @@ body {
 
 /* Custom Input Styles */
 .custom-input:focus {
-  background: rgba(255, 255, 255, 0.08) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
   border-color: var(--primary-color) !important;
-  box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.15) !important;
-  color: white !important;
+  box-shadow: 0 0 0 4px rgba(56, 163, 209, 0.14) !important;
+  color: var(--text-dark) !important;
+}
+
+.custom-input {
+  color: var(--text-dark) !important;
 }
 
 .custom-input::placeholder {
-  color: rgba(255, 255, 255, 0.3) !important;
+  color: rgba(18, 56, 79, 0.45) !important;
 }
-

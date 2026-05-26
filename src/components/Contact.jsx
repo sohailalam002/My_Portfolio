@@ -4,23 +4,32 @@ import { motion } from 'framer-motion';
 import { FaPaperPlane, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 
 const Contact = () => {
+  const zoomInDown = {
+    initial: { opacity: 0, y: -120, scale: 0.75 },
+    whileInView: { opacity: 1, y: 0, scale: 1 },
+    viewport: { once: false, amount: 0.45 },
+    transition: { duration: 0.55, ease: 'easeOut' }
+  };
+
   return (
     <section id="contact" className="section-padding bg-white bg-opacity-5 border-top border-white border-opacity-10">
       <Container>
-        <div className="text-center mb-5">
+        <motion.div className="text-center mb-5" {...zoomInDown}>
           <h2 className="display-4 fw-800 text-white">Say <span className="text-primary">Hello!</span></h2>
           <div className="mx-auto bg-primary mt-2" style={{ width: '40px', height: '4px', borderRadius: '10px' }}></div>
           <p className="text-secondary mt-3">I'm always open to discussing new projects or creative ideas.</p>
-        </div>
+        </motion.div>
 
         <Row className="justify-content-center">
           <Col lg={8}>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, rotateX: -90, y: -20 }}
+              whileInView={{ opacity: 1, rotateX: 0, y: 0 }}
+              whileHover={{ rotateX: 8, scale: 1.02 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.35, ease: 'easeOut' }}
               className="card-picto p-5"
+              style={{ transformPerspective: 900, transformOrigin: 'top center' }}
             >
               <Row className="mb-5 text-center">
                 <Col md={6} className="mb-3 mb-md-0">

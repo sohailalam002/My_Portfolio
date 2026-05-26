@@ -4,13 +4,20 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaRocket, FaMobileAlt } from 'react-icons/fa';
 
 const Projects = () => {
+  const zoomInDown = {
+    initial: { opacity: 0, y: -120, scale: 0.75 },
+    whileInView: { opacity: 1, y: 0, scale: 1 },
+    viewport: { once: false, amount: 0.45 },
+    transition: { duration: 0.55, ease: 'easeOut' }
+  };
+
   const projects = [
     {
       title: "E-Commerce Platform",
       description: "A full-featured MERN marketplace with secure payments and real-time inventory management.",
       tech: ["MongoDB", "Express", "React", "Node.js"],
       icon: <FaRocket size={32} className="text-white" />,
-      gradient: "linear-gradient(135deg, #a855f7 0%, #d946ef 100%)",
+      gradient: "linear-gradient(135deg, #FFFFFF 0%, #BDEBFF 48%, #38A3D1 100%)",
       github: "https://github.com/sohail-alam",
       live: "#"
     },
@@ -19,7 +26,7 @@ const Projects = () => {
       description: "Automated salary calculation and leave management system built with the MERN stack.",
       tech: ["Node.js", "Express", "MongoDB", "PDF Kit"],
       icon: <FaMobileAlt size={32} className="text-white" />,
-      gradient: "linear-gradient(135deg, #6366f1 0%, #a855f7 100%)",
+      gradient: "linear-gradient(135deg, #EAF8FF 0%, #7ED3F7 52%, #0F6FA8 100%)",
       github: "https://github.com/sohail-alam",
       live: "#"
     }
@@ -28,10 +35,10 @@ const Projects = () => {
   return (
     <section id="projects" className="section-padding">
       <Container>
-        <div className="text-center mb-5">
+        <motion.div className="text-center mb-5" {...zoomInDown}>
           <h2 className="display-4 fw-800 text-white">Featured <span className="text-primary">Projects</span></h2>
           <div className="mx-auto bg-primary mt-2" style={{ width: '40px', height: '4px', borderRadius: '10px' }}></div>
-        </div>
+        </motion.div>
 
         <Row className="g-5">
           {projects.map((project, idx) => (

@@ -4,6 +4,13 @@ import { motion } from 'framer-motion';
 import { FaCode, FaServer, FaDatabase, FaWrench } from 'react-icons/fa';
 
 const Skills = () => {
+  const zoomInDown = {
+    initial: { opacity: 0, y: -120, scale: 0.75 },
+    whileInView: { opacity: 1, y: 0, scale: 1 },
+    viewport: { once: false, amount: 0.45 },
+    transition: { duration: 0.55, ease: 'easeOut' }
+  };
+
   const skillSets = [
     {
       category: "Frontend",
@@ -30,10 +37,10 @@ const Skills = () => {
   return (
     <section id="skills" className="section-padding bg-white bg-opacity-5">
       <Container>
-        <div className="text-center mb-5">
+        <motion.div className="text-center mb-5" {...zoomInDown}>
           <h2 className="display-4 fw-800 text-white">My <span className="text-primary">Skills</span></h2>
           <div className="mx-auto bg-primary mt-2" style={{ width: '40px', height: '4px', borderRadius: '10px' }}></div>
-        </div>
+        </motion.div>
 
         <Row className="g-4">
           {skillSets.map((set, idx) => (

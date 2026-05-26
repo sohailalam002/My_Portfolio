@@ -17,7 +17,15 @@ const Hero = () => {
             >
               <h1 className="display-2 fw-800 mb-4 lh-tight">
                 Hello, I'm <br />
-                <span className="text-primary">Sohail Alam</span>
+                <motion.span
+                  className="text-primary d-inline-block"
+                  initial={{ opacity: 1, x: 0 }}
+                  whileInView={{ opacity: [0, 1], x: [-220, 0] }}
+                  viewport={{ once: false, amount: 0.25 }}
+                  transition={{ duration: 0.75, ease: 'easeOut', delay: 0.25 }}
+                >
+                  Sohail Alam
+                </motion.span>
               </h1>
               <p className="lead text-secondary mb-5 pe-lg-5 fs-4">
                 I'm a <strong className="text-dark">MERN Stack Developer</strong> specializing
@@ -32,7 +40,7 @@ const Hero = () => {
 
                 <div className="d-flex gap-3 ms-lg-2">
                   <motion.a
-                    whileHover={{ y: -3, color: 'var(--primary-color)' }}
+                    whileHover={{ y: -3, color: 'var(--primary-hover)' }}
                     href="https://www.linkedin.com/in/sohail-alam-4a1783322"
                     target="_blank"
                     className="text-white p-2 transition-all d-flex align-items-center justify-content-center bg-white bg-opacity-10 rounded-circle shadow-sm"
@@ -41,7 +49,7 @@ const Hero = () => {
                     <FaLinkedin size={22} className="text-white" />
                   </motion.a>
                   <motion.a
-                    whileHover={{ y: -3, color: '#333' }}
+                    whileHover={{ y: -3, color: 'var(--primary-hover)' }}
                     href="https://github.com/sohail-alam"
                     target="_blank"
                     className="text-secondary p-2 transition-all d-flex align-items-center justify-content-center bg-white bg-opacity-10 rounded-circle shadow-sm"
@@ -90,7 +98,7 @@ const Hero = () => {
           border: 4px solid var(--primary-color);
           border-radius: 50%;
           padding: 0;
-          box-shadow: 0 0 40px rgba(168, 85, 247, 0.4), inset 0 0 20px rgba(0,0,0,0.2);
+          box-shadow: 0 0 40px rgba(56, 163, 209, 0.28), inset 0 0 20px rgba(189,235,255,0.55);
           overflow: hidden;
           display: flex;
           align-items: center;
@@ -104,13 +112,13 @@ const Hero = () => {
           transform: scale(1.1); /* Slight additional zoom for better framing */
         }
         .freebie-tag {
-          background: linear-gradient(135deg, #3b82f6, #0066ff);
+          background: var(--accent-gradient);
           color: white;
           padding: 10px 25px;
           border-radius: 12px;
           font-weight: 800;
           transform: rotate(-12deg);
-          box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.2);
+          box-shadow: 0 10px 18px -6px rgba(56, 163, 209, 0.32);
           z-index: 10;
         }
       `}} />

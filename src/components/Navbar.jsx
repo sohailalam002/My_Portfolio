@@ -15,7 +15,7 @@ const Navigation = () => {
       <Container fluid>
         <Navbar.Brand href="#home" className="d-flex align-items-center">
           <div className="logo-circle me-3">S</div>
-          <span className="fw-bold fs-4 d-none d-sm-block text-white">Sohail   <span className="text-primary">Alam</span></span>
+          <span className="navbar-brand-name fw-bold fs-4 d-none d-sm-block text-white">Sohail   <span className="text-primary">Alam</span></span>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0 shadow-none">
@@ -25,7 +25,7 @@ const Navigation = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
             {navLinks.map((link) => (
-              <Nav.Link key={link.name} href={link.href}>
+              <Nav.Link key={link.name} href={link.href} className="nav-text-link">
                 {link.name}
               </Nav.Link>
             ))}
