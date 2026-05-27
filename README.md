@@ -1,16 +1,41 @@
-# React + Vite
+# Sohail Alam - Professional Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, modern single-page portfolio website showcasing MERN Stack Development expertise. Built with **React**, **Vite**, **Bootstrap**, and animated with **Framer Motion**, featuring a deep-blue dark theme with vibrant accents.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo & Development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The project is configured and running on your local machine.
 
-## React Compiler
+- **Local Development Server URL:** [http://localhost:5173/](http://localhost:5173/)
+- **Project Root Directory:** `c:\Users\sohail\Desktop\My_Portfolio`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+To start the development server manually in the future, run:
+```bash
+npm run dev
+```
 
-## Expanding the ESLint configuration
+To build the project for production:
+```bash
+npm run build
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+- **Responsive Design:** Crafted using React-Bootstrap, ensuring a fully responsive grid system matching any mobile, tablet, or desktop layout.
+- **Micro-Animations:** Powered by `framer-motion` for elegant header transitions, smooth reveal effects, and hover interactions on buttons and social icons.
+- **Deep-Blue Dark Theme:** Sleek modern color palette utilizing CSS custom properties for uniform dark-theme components with high-contrast text and inputs.
+- **High-Contrast Typography:** Handcrafted styles with custom font styling that stand out on a slate-black backdrop.
+- **Interactive Contact Form:** Features validated input forms with styled labels, placeholders, and interactive states.
+- **Social Integration:** Live connected links for LinkedIn and GitHub with styled icon buttons.
+
+---
+
+## 🛠️ Tech Stack & Dependencies
+
+- **Framework:** React 19 + Vite 8
+- **Styling:** Bootstrap 5, Custom CSS (`index.css`)
+- **Animations:** Framer Motion
+- **Icons:** React Icons (`fa` / FontAwesome)
+- **Routing:** React Router DOM (fully configured)

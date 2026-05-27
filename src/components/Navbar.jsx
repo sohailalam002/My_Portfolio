@@ -15,7 +15,7 @@ const Navigation = () => {
       <Container fluid>
         <Navbar.Brand href="#home" className="d-flex align-items-center">
           <div className="logo-circle me-3">S</div>
-          <span className="navbar-brand-name fw-bold fs-4 d-none d-sm-block text-white">Sohail   <span className="text-primary">Alam</span></span>
+          <span className="navbar-brand-name fw-bold fs-4 text-white">Sohail <span className="text-primary">Alam</span></span>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0 shadow-none">

@@ -19,10 +19,9 @@ const Hero = () => {
                 Hello, I'm <br />
                 <motion.span
                   className="text-primary d-inline-block"
-                  initial={{ opacity: 1, x: 0 }}
-                  whileInView={{ opacity: [0, 1], x: [-220, 0] }}
-                  viewport={{ once: false, amount: 0.25 }}
-                  transition={{ duration: 0.75, ease: 'easeOut', delay: 0.25 }}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
                 >
                   Sohail Alam
                 </motion.span>
