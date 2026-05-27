@@ -17,7 +17,7 @@ const Projects = () => {
       description: "A full-featured MERN marketplace with secure payments and real-time inventory management.",
       tech: ["MongoDB", "Express", "React", "Node.js"],
       icon: <FaRocket size={32} className="text-white" />,
-      gradient: "linear-gradient(135deg, #FFFFFF 0%, #BDEBFF 48%, #38A3D1 100%)",
+      gradient: "linear-gradient(135deg, #0EA5D8 0%, #7377E8 48%, #E25CFF 100%)",
       github: "https://github.com/sohail-alam",
       live: "#"
     },
@@ -26,7 +26,7 @@ const Projects = () => {
       description: "Automated salary calculation and leave management system built with the MERN stack.",
       tech: ["Node.js", "Express", "MongoDB", "PDF Kit"],
       icon: <FaMobileAlt size={32} className="text-white" />,
-      gradient: "linear-gradient(135deg, #EAF8FF 0%, #7ED3F7 52%, #0F6FA8 100%)",
+      gradient: "linear-gradient(135deg, #031B2F 0%, #115E8C 38%, #8B5CF6 72%, #E25CFF 100%)",
       github: "https://github.com/sohail-alam",
       live: "#"
     }

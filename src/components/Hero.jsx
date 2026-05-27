@@ -94,11 +94,11 @@ const Hero = () => {
           position: relative;
           width: 350px;
           height: 350px;
-          background: var(--bg-inner); /* Updated for dark theme */
-          border: 4px solid var(--primary-color);
+          background: radial-gradient(circle at 50% 18%, rgba(226, 92, 255, 0.2), rgba(8, 9, 18, 0.94) 62%);
+          border: 4px solid rgba(35, 183, 229, 0.72);
           border-radius: 50%;
           padding: 0;
-          box-shadow: 0 0 40px rgba(56, 163, 209, 0.28), inset 0 0 20px rgba(189,235,255,0.55);
+          box-shadow: 0 0 44px rgba(35, 183, 229, 0.24), 0 0 74px rgba(226, 92, 255, 0.14), inset 0 0 28px rgba(35, 183, 229, 0.16);
           overflow: hidden;
           display: flex;
           align-items: center;
@@ -118,7 +118,7 @@ const Hero = () => {
           border-radius: 12px;
           font-weight: 800;
           transform: rotate(-12deg);
-          box-shadow: 0 10px 18px -6px rgba(56, 163, 209, 0.32);
+          box-shadow: 0 10px 18px -6px rgba(226, 92, 255, 0.42);
           z-index: 10;
         }
       `}} />
