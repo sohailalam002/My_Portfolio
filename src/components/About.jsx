@@ -54,7 +54,7 @@ const About = () => {
                   <h5 className="fw-bold mb-0 text-white">Experience</h5>
                 </div>
                 <h6 className="fw-bold mb-1">Shiwansh Solutions</h6>
-                <small className="text-secondary">Full Stack Development Trainee</small>
+                <small className="text-secondary">Full Stack Developer(MERN) 1+ Year</small>
               </div>
             </motion.div>
           </Col>
