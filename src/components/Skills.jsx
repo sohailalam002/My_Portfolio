@@ -15,12 +15,12 @@ const Skills = () => {
     {
       category: "Frontend",
       icon: <FaCode className="text-primary" size={24} />,
-      skills: ["React.js", "JavaScript (ES6+)", "Bootstrap 5", "HTML5/CSS3"]
+      skills: ["React.js", "JavaScript (ES6+)","Redux", "Bootstrap 5", "HTML5/CSS3"]
     },
     {
       category: "Backend",
       icon: <FaServer className="text-primary" size={24} />,
-      skills: ["Node.js", "Express.js", "REST APIs", "JWT Auth"]
+      skills: ["Node.js", "Express.js", "REST APIs", "JWT Auth","RBAC"]
     },
     {
       category: "Database",
